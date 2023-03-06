@@ -12,7 +12,7 @@ app.use(express.static("public"));
 
 app.set("view engine", "ejs");
 // Connecting to local mongodb
-mongoose.connect("mongodb+srv://sample-user:asakanaman1@cluster0.hh3s0vf.mongodb.net/practicingDB");
+mongoose.connect("mongodb+srv://flezo19:pokemon1@cluster0.hh3s0vf.mongodb.net/practicingDB");
 // Schema
 const todoSchema = new mongoose.Schema({
   name: {
