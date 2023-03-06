@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <div class="box" id="title">
+      <h1><%= title %></h1>
+    </div>
+    <div class="box item">
+      <% todos.forEach(todo => { %>
+        <form class="todo-form" action="/delete" method="POST">
+          <input onChange="this.form.submit()" type="checkbox" name="checkbox" value="<%= todo.id %>">
+          <p><%= todo.name %></p>
+          <input type="hidden" name="hidden" value="<%= title %>"></input>
+        </form>
+      <% }) %>
+      <form class="input-form" action="/" method="POST">
+        <input type="text" name="todoInput" autocomplete="off" required placeholder="New Item">
+        <button class="submit-button" name="submitButton" value="<%= title %>">+</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
